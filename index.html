@@ -58,7 +58,9 @@
         var list = [];
         
         for (var type in speciesData) {
-          list.push(<li style = {{
+          list.push(<li 
+          key={type}
+          style={{
             border: '1px solid black',
             margin: 2,
             padding: 2,
