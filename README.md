@@ -1,2 +1,2 @@
 # animals-app
-awesomeness
+awesomeness app
