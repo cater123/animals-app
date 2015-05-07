@@ -10,13 +10,54 @@
     <div id="content"></div>
     
     <script type="text/jsx">
+    
+    var speciesData = {
+      mammals: {
+        name: 'Mammals',
+        species: {
+          'mountain_beaver': {
+            name: 'Mountain Beaver',
+            food: 'Sword Fern',
+            niche: 'herbivore',
+            habitat: 'Found in the Pacific Coast',
+            author: 'Jason'
+          }
+        },
+      },
+      reptiles: {
+        name: 'Reptiles',
+        species: {}
+      },
+      birds:   {
+        name: 'Birds',
+        species: {}
+      },
+      amphibians: {
+        name: 'Amphibians',
+        species: {}
+      },
+      insects: {
+        name: 'Insects',
+        species: {}
+      },
+     
+      
+    }; 
     var Homepage = React.createClass({
+      
+      
       render: function() {
+        var list = [];
+        
+        for (var type in speciesData) {
+          list.push(<div> {speciesData[type].name}</div>)
+        }
+        
         return (
           <div>
             <h1>My Animals App</h1>
-            <p>Hi</p>
-            <a href="http://google.com">link to google</a>
+          
+            {list}
           </div>
         );
       }
