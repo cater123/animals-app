@@ -109,17 +109,32 @@
       
     var Homepage = React.createClass({
       
-      
-      render: function() {
-        var list = [];
+      //Page turn thingy
+      getInitialState: function() {
+        return {
+          animalClass: '',
+          animal: '',
+        };
+      },
+      changeAnimalClass: function() {
+       
+           //When I click this button it should take me to
+           //that animal class thingy page
+           this.setState({ 
+           animalClass: 'mammals',
+           });
+      },
+      renderAnimalClasses: function() {
+        var animalClasses = [];
+        var changeAnimalClass = this.changeAnimalClass;
         
         for (var type in speciesData) {
           //LIST!!!
-          list.push(
+          animalClasses.push(
             <li 
               key={type}
               >
-                <a
+                <span
                     href="#"
                     style={{
                       border: '1px solid black',
@@ -127,11 +142,19 @@
                       padding: 2,
                       display: "block",
                       textDecoration: 'none',
-                      color: 'white'
+                      color: 'white',
+                      cursor: 'pointer',
                     }}
+                    onClick={
+                      function (e) {
+                        e.preventDefault();
+                        changeAnimalClass();
+                      }
+                    }
+                    
                 >
                   {speciesData[type].name}
-                </a>
+                </span>
             </li>
           );
         }
@@ -150,10 +173,22 @@
                 margin: 0,
                   
             }}>
-              {list}
+              {animalClasses}
             </ul>
           </div>
         );
+      },
+      renderAnimalClass: function() {
+        if (this.state.animalClass.length > 0) {
+          return this.renderAnimalClass();
+          
+        }
+        return(
+          <div> {this.state.animalClass} </div>
+          );
+      },
+      render: function() {
+        return this.renderAnimalClasses();
       }
     });
     React.render(
@@ -163,3 +198,6 @@
     </script>
   </body>
 </html>
+
+
+
