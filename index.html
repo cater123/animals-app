@@ -11,6 +11,7 @@
         margin:0;
         padding:0;
         
+        
       }
     </style>
   </head>
@@ -29,28 +30,83 @@
             niche: 'herbivore',
             habitat: 'Found in the Pacific Coast',
             author: 'Jason'
-          }
+          },
+        
+       
+          'western snowy plover': {
+            name: 'Western Snowy Plover',
+            food: 'Small insects',
+            niche: 'Carnivore',
+            habitat: 'Beaches',
+            authors: 'Tristan, Shaan, Arya, Isabella, Mary, and Vikram'
+          },
         },
+      
+      //ending of Mammals Loop
       },
+      
       reptiles: {
         name: 'Reptiles',
         species: {}
+      
+        //ending of Reptiles Loop
       },
       birds:   {
         name: 'Birds',
-        species: {}
+        species: {
+          'peregrine falcon': {
+            name: 'Peregrine Falcon',
+            food: 'Pigeons, Doves, Waterfowl, Songbirds, and Waders',
+            niche: 'Carnivore, Consumer',
+            habitat: 'All Continents (except for Antarctica)',
+            authors: 'Isra and Malaina',
+            
+          }
+        }
+      
+        //ending of Birds loop
       },
       amphibians: {
         name: 'Amphibians',
         species: {}
+      
+        //ending of Amphibians loop
       },
       insects: {
         name: 'Insects',
-        species: {}
-      },
-     
+        species: {
+          'langes metalmark': {
+            name: 'Langes Metalmark',
+            food: 'Caterpillar: Naked Stemmed Buckwheat, Adult: Nectar',
+            niche: 'Herbivore',
+            habitat: 'Contra Costa County ~ antioch, Dunes National Wildlife Refuge',
+            authors: 'Malaina and Mylan',
+          }
+        }
+       
       
-    }; 
+        //ending of Insect loop
+      },
+      
+      fish: {
+        name: 'Fish',
+        species: {
+          'coho salmon': {
+            name: 'Coho Salmon',
+            food: 'Plankton, Insects, and small fish',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Freshwater and shallow parts of the Pacific Ocean. The Gulf of Alaska',
+            author: 'Isra',
+          }
+          //start here
+        }
+      
+      //ending of Fish loop  
+      },
+        
+        //end of loop
+    };
+      
     var Homepage = React.createClass({
       
       
@@ -58,13 +114,26 @@
         var list = [];
         
         for (var type in speciesData) {
-          list.push(<li 
-          key={type}
-          style={{
-            border: '1px solid black',
-            margin: 2,
-            padding: 2,
-          }}> {speciesData[type].name}</li>)
+          //LIST!!!
+          list.push(
+            <li 
+              key={type}
+              >
+                <a
+                    href="#"
+                    style={{
+                      border: '1px solid black',
+                      margin: 2,
+                      padding: 2,
+                      display: "block",
+                      textDecoration: 'none',
+                      color: 'white'
+                    }}
+                >
+                  {speciesData[type].name}
+                </a>
+            </li>
+          );
         }
         
         return (
@@ -79,6 +148,7 @@
                 listStyle: "none",
                 padding: 0,
                 margin: 0,
+                  
             }}>
               {list}
             </ul>
