@@ -179,15 +179,15 @@
         );
       },
       renderAnimalClass: function() {
-        if (this.state.animalClass.length > 0) {
-          return this.renderAnimalClass();
-          
-        }
         return(
           <div> {this.state.animalClass} </div>
           );
       },
       render: function() {
+        if (this.state.animalClass.length > 0) {
+          return this.renderAnimalClass();
+          
+        }
         return this.renderAnimalClasses();
       }
     });
