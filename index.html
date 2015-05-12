@@ -101,6 +101,14 @@
             author: 'Isra',
           },
           //start here
+          'tidewater goby': {
+            name: 'Tidewater Goby',
+            food: 'Phytoplankton',
+            niche: 'Omnivore, Consumer',
+            habitat: 'Smith River, and the Agua Hedionda Lagoon',
+            authors: 'Timothy, Luke, Mishal, and Zidaan',
+          },
+          
         }
       
       //ending of Fish loop  
@@ -188,7 +196,15 @@
         var speciesList = [];
         for(var species in speciesData[animalClass].species) {
           var name = (speciesData[animalClass].species[species].name)
-          speciesList.push(<li>{name}</li>)
+          speciesList.push(<li><a href="" style={{
+                      border: '1px solid black',
+                      margin: 2,
+                      padding: 2,
+                      display: "block",
+                      textDecoration: 'none',
+                      color: 'white',
+                      cursor: 'pointer',
+                    }}>{name}</a></li>)
         }
         return(
           <div style={{
@@ -234,3 +250,6 @@
     </script>
   </body>
 </html>
+
+
+
