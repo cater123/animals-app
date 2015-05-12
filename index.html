@@ -93,7 +93,7 @@
       fish: {
         name: 'Fish',
         species: {
-          'coho salmon': {
+          'coho_salmon': {
             name: 'Coho Salmon',
             food: 'Plankton, Insects, and small fish',
             niche: 'Carnivore, Consumer',
@@ -185,6 +185,11 @@
         var changeAnimalClass = this.changeAnimalClass;
         var animalClass = this.state.animalClass;
         var animalClassName = speciesData[animalClass].name        //Mammals thingymabob that michelle fixed
+        var speciesList = [];
+        for(var species in speciesData[animalClass].species) {
+          var name = (speciesData[animalClass].species[species].name)
+          speciesList.push(<li>{name}</li>)
+        }
         return(
           <div style={{
             background:"#1D728F",
@@ -193,13 +198,24 @@
           
           <a href="#"
           style= {{color:"white",textDecoration:"none"}}
+          
           onClick={
             function (e) {
               e.preventDefault();
               changeAnimalClass("");
+              
             }}          
           >Back</a>
           <h1 style= {{textAlign: "center"}}> {animalClassName} </h1>
+          <ul style={{
+                textAlign: "center",
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                  
+            }}>
+              {speciesList}
+            </ul>
           </div>
           );
       },
@@ -218,6 +234,3 @@
     </script>
   </body>
 </html>
-
-
-
