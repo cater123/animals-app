@@ -61,7 +61,7 @@
             habitat: 'All Continents (except for Antarctica)',
             authors: 'Isra and Malaina',
             
-          }
+          },
         }
       
         //ending of Birds loop
@@ -81,7 +81,9 @@
             niche: 'Herbivore',
             habitat: 'Contra Costa County ~ antioch, Dunes National Wildlife Refuge',
             authors: 'Malaina and Mylan',
-          }
+          },
+        
+          
         }
        
       
@@ -97,7 +99,7 @@
             niche: 'Carnivore, Consumer',
             habitat: 'Freshwater and shallow parts of the Pacific Ocean. The Gulf of Alaska',
             author: 'Isra',
-          }
+          },
           //start here
         }
       
@@ -116,15 +118,16 @@
           animal: '',
         };
       },
-      changeAnimalClass: function() {
+      changeAnimalClass: function(type) {
        
            //When I click this button it should take me to
            //that animal class thingy page
+           //2nd clickey thing
            this.setState({ 
-           animalClass: 'mammals',
+           animalClass: type,
            });
       },
-      renderAnimalClasses: function() {
+      renderHomepage: function() {
         var animalClasses = [];
         var changeAnimalClass = this.changeAnimalClass;
         
@@ -134,7 +137,7 @@
             <li 
               key={type}
               >
-                <span
+                <a
                     href="#"
                     style={{
                       border: '1px solid black',
@@ -148,13 +151,13 @@
                     onClick={
                       function (e) {
                         e.preventDefault();
-                        changeAnimalClass();
+                        changeAnimalClass(type);
                       }
                     }
                     
                 >
                   {speciesData[type].name}
-                </span>
+                </a>
             </li>
           );
         }
@@ -179,8 +182,19 @@
         );
       },
       renderAnimalClass: function() {
+        var changeAnimalClass = this.changeAnimalClass;
+        //Mammals thingymabob that michelle fixed
         return(
+          <div>
+          <a href="#"
+          onClick={
+            function (e) {
+              e.preventDefault();
+              changeAnimalClass("");
+            }}          
+          >Back</a>
           <div> {this.state.animalClass} </div>
+          </div>
           );
       },
       render: function() {
@@ -188,7 +202,7 @@
           return this.renderAnimalClass();
           
         }
-        return this.renderAnimalClasses();
+        return this.renderHomepage();
       }
     });
     React.render(
