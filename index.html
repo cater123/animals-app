@@ -27,19 +27,21 @@
           'mountain_beaver': {
             name: 'Mountain Beaver',
             food: 'Sword Fern',
-            niche: 'herbivore',
+            niche: 'Herbivore, Consumer',
             habitat: 'Found in the Pacific Coast',
             author: 'Jason'
           },
-        
+        'san hoaquin kit fox': {
+          name: 'San Juaquin Kit Fox',
+          food: 'Kangaroo rats, Cottontail Rabbits, and Blacktail Jackrabbits',
+          niche: 'Carnivor, Consumer',
+          habitat: 'Southwest US and Central Mexico',
+          reason_for_endangerment:'Climate change, Drought',
+          author: 'Mishal',
+          
+        }
        
-          'western snowy plover': {
-            name: 'Western Snowy Plover',
-            food: 'Small insects',
-            niche: 'Carnivore',
-            habitat: 'Beaches',
-            authors: 'Tristan, Shaan, Arya, Isabella, Mary, and Vikram'
-          },
+        
         },
       
       //ending of Mammals Loop
@@ -62,7 +64,15 @@
             authors: 'Isra and Malaina',
             
           },
-        }
+        'western snowy plover': {
+            name: 'Western Snowy Plover',
+            food: 'Small insects',
+            niche: 'Carnivore',
+            habitat: 'Beaches',
+            authors: 'Tristan, Shaan, Arya, Isabella, Mary, and Vikram'
+          },
+          
+        },
       
         //ending of Birds loop
       },
@@ -82,7 +92,11 @@
             habitat: 'Contra Costa County ~ antioch, Dunes National Wildlife Refuge',
             authors: 'Malaina and Mylan',
           },
-        
+        'delta green ground beetle': {
+          name: 'Delta Green Ground Beetle',
+          food: 'Soft Bodied Arthropods',
+          niche: 'Carnivore, Consumer',
+        },
           
         }
        
@@ -98,6 +112,7 @@
             food: 'Plankton, Insects, and small fish',
             niche: 'Carnivore, Consumer',
             habitat: 'Freshwater and shallow parts of the Pacific Ocean. The Gulf of Alaska',
+            why_is_it_endangered:'',
             author: 'Isra',
           },
           //start here
@@ -106,6 +121,7 @@
             food: 'Phytoplankton',
             niche: 'Omnivore, Consumer',
             habitat: 'Smith River, and the Agua Hedionda Lagoon',
+            why_is_it_endangered: 'Bad at reproducing',
             authors: 'Timothy, Luke, Mishal, and Zidaan',
           },
           
@@ -157,10 +173,11 @@
                       cursor: 'pointer',
                     }}
                     onClick={
-                      function (e) {
+                      function (type, e) {
                         e.preventDefault();
                         changeAnimalClass(type);
-                      }
+                      }.bind(this, type)
+                      
                     }
                     
                 >
