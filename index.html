@@ -31,7 +31,7 @@
             habitat: 'Found in the Pacific Coast',
             author: 'Jason'
           },
-        'san hoaquin kit fox': {
+        'san Joaquin kit fox': {
           name: 'San Juaquin Kit Fox',
           food: 'Kangaroo rats, Cottontail Rabbits, and Blacktail Jackrabbits',
           niche: 'Carnivor, Consumer',
@@ -56,7 +56,7 @@
       birds:   {
         name: 'Birds',
         species: {
-          'peregrine falcon': {
+          'peregrine_falcon': {
             name: 'Peregrine Falcon',
             food: 'Pigeons, Doves, Waterfowl, Songbirds, and Waders',
             niche: 'Carnivore, Consumer',
@@ -64,7 +64,7 @@
             authors: 'Isra and Malaina',
             
           },
-        'western snowy plover': {
+        'western_snowy_plover': {
             name: 'Western Snowy Plover',
             food: 'Small insects',
             niche: 'Carnivore',
@@ -85,7 +85,7 @@
       insects: {
         name: 'Insects',
         species: {
-          'langes metalmark': {
+          'langes_metalmark': {
             name: 'Langes Metalmark',
             food: 'Caterpillar: Naked Stemmed Buckwheat, Adult: Nectar',
             niche: 'Herbivore',
@@ -116,7 +116,7 @@
             author: 'Isra',
           },
           //start here
-          'tidewater goby': {
+          'tidewater_goby': {
             name: 'Tidewater Goby',
             food: 'Phytoplankton',
             niche: 'Omnivore, Consumer',
@@ -213,7 +213,16 @@
         var speciesList = [];
         for(var species in speciesData[animalClass].species) {
           var name = (speciesData[animalClass].species[species].name)
-          speciesList.push(<li><a href="" style={{
+          speciesList.push(<li><a 
+                    href="" 
+                    onClick={function (species, e) {
+                        e.preventDefault();
+                        this.setState({
+                          animal: species,
+                        })
+                      }.bind(this, species)}
+                    
+                    style={{
                       border: '1px solid black',
                       margin: 2,
                       padding: 2,
@@ -252,7 +261,13 @@
           </div>
           );
       },
+      renderAnimalPage: function() {
+        return <div>{this.state.animal}</div>
+      },
       render: function() {
+        if (this.state.animal.length >0) {
+          return this.renderAnimalPage()
+        }
         if (this.state.animalClass.length > 0) {
           return this.renderAnimalClass();
           
