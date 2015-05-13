@@ -29,7 +29,7 @@
             food: 'Sword Fern',
             niche: 'Herbivore, Consumer',
             habitat: 'Found in the Pacific Coast',
-            author: 'Jason'
+            authors: 'Jason'
           },
         'san Joaquin kit fox': {
           name: 'San Juaquin Kit Fox',
@@ -37,9 +37,23 @@
           niche: 'Carnivor, Consumer',
           habitat: 'Southwest US and Central Mexico',
           reason_for_endangerment:'Climate change, Drought',
-          author: 'Mishal',
+          authors: 'Mishal',
           
-        }
+        },
+        'humpback whale': {
+          name: 'Humpback Whale',
+          food: 'Krill, fish, and Algae',
+          niche: 'Herbivore, Consumer',
+          habitat: 'Surface of the Ocean, and shallow coastline waters',
+          reason_for_endangerment: 'Tangeled in fishing gear',
+          authors: 'Adam, Neil, Jasper, Shyla',
+          
+        },
+        'southern sea otter': {
+          name: 'Southern Sea Otter',
+          food: 'Urchins,abalone, mussels, clams, crabs, snails, and lots of other species',
+          niche: 'Carnivore, Consumer',
+        },
        
         
         },
@@ -71,7 +85,23 @@
             habitat: 'Beaches',
             authors: 'Tristan, Shaan, Arya, Isabella, Mary, and Vikram'
           },
-          
+          'california least tern': {
+            name: 'California Least Tern',
+            food: 'Fish',
+            niche: 'Carnivore',
+            habitat: 'Bay Area Coast',
+            reason_for_endangerment: 'Habitat Loss',
+            authors: 'Mishal, Luke, Timothy, Zidaan',
+          },
+          'california brown pelican': {
+            name: 'California Brown Pelican',
+            food: 'Mostly fish, and occasional amphibians and crustacean',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Rocky, sandy, or vegetated beaches',
+            reason_for_endangerment: 'The pesticide, DDT, is making the fish poisonous',
+            authors: 'Adam, Neil, Jasper, Shyla',
+            
+          },
         },
       
         //ending of Birds loop
@@ -96,6 +126,9 @@
           name: 'Delta Green Ground Beetle',
           food: 'Soft Bodied Arthropods',
           niche: 'Carnivore, Consumer',
+          habitat: 'US',
+          reason_for_endangerment: 'Small habitat range and the disruption of Wetlands',
+          authors: 'Mishal, Luke, Timothy, and Zidaan',
         },
           
         }
@@ -112,8 +145,8 @@
             food: 'Plankton, Insects, and small fish',
             niche: 'Carnivore, Consumer',
             habitat: 'Freshwater and shallow parts of the Pacific Ocean. The Gulf of Alaska',
-            why_is_it_endangered:'',
-            author: 'Isra',
+            reason_for_endangerment:'',
+            authors: 'Isra',
           },
           //start here
           'tidewater_goby': {
@@ -121,7 +154,7 @@
             food: 'Phytoplankton',
             niche: 'Omnivore, Consumer',
             habitat: 'Smith River, and the Agua Hedionda Lagoon',
-            why_is_it_endangered: 'Bad at reproducing',
+            readon_for_endangerment: 'Bad at reproducing',
             authors: 'Timothy, Luke, Mishal, and Zidaan',
           },
           
@@ -286,6 +319,12 @@
             textAlign: "center"
             
           }}>{animalObject.name}</h1>
+          <p style={{textAlign: 'center',color:'white'}}>Food: {animalObject.food}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Niche: {animalObject.niche}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Habitat: {animalObject.habitat}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Reason for Endangerment: {animalObject.reason_for_endangerment}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Authors: {animalObject.authors}</p>
+          
         </div>
         
       },
