@@ -262,7 +262,32 @@
           );
       },
       renderAnimalPage: function() {
-        return <div>{this.state.animal}</div>
+        var animal = this.state.animal;
+        var animalObject = speciesData[this.state.animalClass].species[animal];
+        return <div style= {{
+          background:"#1D728F",
+            color: "silver",
+            height: "100%"}}>
+          <a href="#"
+          style= {{color:"white",textDecoration:"none"}}
+          
+          onClick={
+            function (e) {
+              e.preventDefault();
+             this.setState({
+               animal: '',
+             })
+              
+            }.bind(this)
+            
+          }          
+          >Back</a>
+          <h1 style={{
+            textAlign: "center"
+            
+          }}>{animalObject.name}</h1>
+        </div>
+        
       },
       render: function() {
         if (this.state.animal.length >0) {
