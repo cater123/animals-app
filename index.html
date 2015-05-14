@@ -3,7 +3,416 @@
   <head>
     <title>Hello React</title>
     <script src="https://fb.me/react-0.13.2.js"></script>
+    <script src="https://fb.me/J<!-- index.html -->
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="https://fb.me/react-0.13.2.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.2.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <style>
+      head, body {
+        height: 100%;
+        margin:0;
+        padding:0;
+        
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    
+    <script type="text/jsx">
+    
+    var speciesData = {
+      mammals: {
+        name: 'Mammals',
+        species: {
+          'mountain_beaver': {
+            name: 'Mountain Beaver',
+            food: 'Sword Fern',
+            niche: 'Herbivore, Consumer',
+            habitat: 'Found in the Pacific Coast',
+            authors: 'Jason'
+          },
+        'san joaquin kit fox': {
+          name: 'San Juaquin Kit Fox',
+          food: 'Kangaroo rats, Cottontail Rabbits, and Blacktail Jackrabbits',
+          niche: 'Carnivor, Consumer',
+          habitat: 'Southwest US and Central Mexico',
+          reason_for_endangerment:'Climate change, Drought',
+          authors: 'Mishal',
+          
+        },
+        'humpback whale': {
+          name: 'Humpback Whale',
+          food: 'Krill, fish, and Algae',
+          niche: 'Herbivore, Consumer',
+          habitat: 'Surface of the Ocean, and shallow coastline waters',
+          reason_for_endangerment: 'Tangeled in fishing gear',
+          authors: 'Adam, Neil, Jasper, Shyla',
+          
+        },
+        'southern sea otter': {
+          name: 'Southern Sea Otter',
+          food: 'Urchins,abalone, mussels, clams, crabs, snails, and lots of other species',
+          niche: 'Carnivore, Consumer',
+          habitat: 'Kelp Forests',
+          reason_for_endangerment: 'Oil spills, habitat loss, disease, and lack of food',
+          authors: 'Adam, Neil, Jasper, Shyla',
+        },
+       
+        
+        },
+      
+      //ending of Mammals Loop
+      },
+      
+      reptiles: {
+        name: 'Reptiles',
+        species: {
+          'blainvilles horned lizard': {
+            name: 'Blainvilles Horned Lizard',
+            food: 'Ants, Beetles, Spiders, Grasshoppers, Termites, and Bees',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Sand, Rocks, and Gravel',
+            reason_for_endangerment: 'Habitat Destruction',
+            authors: 'Riya, Jane, Alisha, Zach',
+            
+          },
+          'alameda whipsnake': {
+            name: 'Alameda Whipsnake',
+            food: 'Lizards, Snakes, Birds',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Costal Scrub and Grasslands',
+            reason_for_endangerment: 'Habitat Loss',
+            authors: 'Riya, Jane, Alisha, Zach',
+        
+          },
+          
+        },
+      
+        //ending of Reptiles Loop
+      },
+      birds:   {
+        name: 'Birds',
+        species: {
+          'peregrine_falcon': {
+            name: 'Peregrine Falcon',
+            food: 'Pigeons, Doves, Waterfowl, Songbirds, and Waders',
+            niche: 'Carnivore, Consumer',
+            habitat: 'All Continents (except for Antarctica)',
+            reason_for_endangerment: 'Eaating accumulated DDEC (found in DDT) in prey. Because of this this eggshells resulted, that could break easily',
+            authors: 'Isra and Malaina',
+            
+          },
+        'western_snowy_plover': {
+            name: 'Western Snowy Plover',
+            food: 'Small insects',
+            niche: 'Carnivore',
+            habitat: 'Beaches',
+            reason_for_endangerment: 'Encounters with people, dogs, vehicles, and trash threten the breeding success of these birds',
+            authors: 'Tristan, Shaan, Arya, Isabella, Mary, and Vikram'
+          },
+          'california least tern': {
+            name: 'California Least Tern',
+            food: 'Fish',
+            niche: 'Carnivore',
+            habitat: 'Bay Area Coast',
+            reason_for_endangerment: 'Habitat Loss',
+            authors: 'Mishal, Luke, Timothy, Zidaan',
+          },
+          'california brown pelican': {
+            name: 'California Brown Pelican',
+            food: 'Mostly fish, and occasional amphibians and crustacean',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Rocky, sandy, or vegetated beaches',
+            reason_for_endangerment: 'The pesticide, DDT, is making the fish poisonous',
+            authors: 'Adam, Neil, Jasper, Shyla',
+            
+          },
+          'northern spotted owl': {
+            name: 'Northern Spotted Owl',
+            food: 'Squirrels, rats, mice, birds, insects, and reptiles',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Old growth forests of the Northern California and the Pacific Northwest of the US',
+            reason_for_endangerment: 'Declining Habitat',
+            authors: 'Adam, Neil, Jasper, Shyla',
+            
+          },
+        },
+      
+        //ending of Birds loop
+      },
+      amphibians: {
+        name: 'Amphibians',
+        species: {}
+      
+        //ending of Amphibians loop
+      },
+      insects: {
+        name: 'Insects',
+        species: {
+          'langes_metalmark': {
+            name: 'Langes Metalmark',
+            food: 'Caterpillar: Naked Stemmed Buckwheat, Adult: Nectar',
+            niche: 'Herbivore',
+            habitat: 'Contra Costa County ~ antioch, Dunes National Wildlife Refuge',
+            reason_for_endangerment: 'Sand dune mining prevents hast plants and food form growing',
+            authors: 'Malaina and Mylan',
+          },
+        'delta green ground beetle': {
+          name: 'Delta Green Ground Beetle',
+          food: 'Soft Bodied Arthropods',
+          niche: 'Carnivore, Consumer',
+          habitat: 'US',
+          reason_for_endangerment: 'Small habitat range and the disruption of Wetlands',
+          authors: 'Mishal, Luke, Timothy, and Zidaan',
+        },
+        'mt hermon beetle': {
+          name: 'Mt. Hermon Beetle',
+          food: 'Roots',
+          niche: 'Herbivore, Consumer',
+          habitat: 'Zayante sand hills',
+          reason_for_endangerment: 'Sand Mining and Urban Development',
+          authors: 'Isabella, Mary, Tristan, Arya, Shaan, Vikram',
+        },
+        'zayante bard-winged grasshopper': {
+          name: 'Zayante Bard-Winged Grasshopper',
+          food: 'Grass, Trees, Leaves',
+          niche: 'Herbivore, Consumer',
+          habitat: 'Sandhills',
+          reason_for_endangerment: 'Habitat Loss',
+          authors: 'Riya, Jane, Alisha, Zach',
+        },
+          'san bruno elfin': {
+            name: 'San Bruno Elfin',
+            food: 'Nectar from Sedum',
+            niche: 'Herbivore, Consumer',
+            habitat: 'Lives in Costal Grasslands where Sedum grows',
+            reason_for_endangerment: 'Only eats Sedum',
+            authors: 'Riya, Jane, Alisha, Zach',
+          },
+        },
+       
+      
+        //ending of Insect loop
+      },
+      
+      fish: {
+        name: 'Fish',
+        species: {
+          'coho_salmon': {
+            name: 'Coho Salmon',
+            food: 'Plankton, Insects, and small fish',
+            niche: 'Carnivore, Consumer',
+            habitat: 'Freshwater and shallow parts of the Pacific Ocean. The Gulf of Alaska',
+            reason_for_endangerment:'Hunted or Fished to eat',
+            authors: 'Isra',
+          },
+          //start here
+          'tidewater_goby': {
+            name: 'Tidewater Goby',
+            food: 'Phytoplankton',
+            niche: 'Omnivore, Consumer',
+            habitat: 'Smith River, and the Agua Hedionda Lagoon',
+            readon_for_endangerment: 'Bad at reproducing',
+            authors: 'Timothy, Luke, Mishal, and Zidaan',
+          },
+          
+        }
+      
+      //ending of Fish loop  
+      },
+        
+        //end of loop
+    };
+      
+    var Homepage = React.createClass({
+      
+      //Page turn thingy
+      getInitialState: function() {
+        return {
+          animalClass: '',
+          animal: '',
+        };
+      },
+      changeAnimalClass: function(type) {
+       
+           //When I click this button it should take me to
+           //that animal class thingy page
+           //2nd clickey thing
+           this.setState({ 
+           animalClass: type,
+           });
+      },
+      renderHomepage: function() {
+        var animalClasses = [];
+        var changeAnimalClass = this.changeAnimalClass;
+        
+        for (var type in speciesData) {
+          //LIST!!!
+          animalClasses.push(
+            <li 
+              key={type}
+              >
+                <a
+                    href="#"
+                    style={{
+                      border: '1px solid black',
+                      margin: 2,
+                      padding: 2,
+                      display: "block",
+                      textDecoration: 'none',
+                      color: 'white',
+                      cursor: 'pointer',
+                    }}
+                    onClick={
+                      function (type, e) {
+                        e.preventDefault();
+                        changeAnimalClass(type);
+                      }.bind(this, type)
+                      
+                    }
+                    
+                >
+                  {speciesData[type].name}
+                </a>
+            </li>
+          );
+        }
+        
+        return (
+          <div style = {{
+            background:"#1D728F",
+            color: "silver",
+            height: "100%"
+          }}>
+            <h1 style={{textAlign: "center"}}>My Animals App</h1>
+            <ul style={{
+                textAlign: "center",
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                  
+            }}>
+              {animalClasses}
+            </ul>
+          </div>
+        );
+      },
+      renderAnimalClass: function() {
+        var changeAnimalClass = this.changeAnimalClass;
+        var animalClass = this.state.animalClass;
+        var animalClassName = speciesData[animalClass].name        //Mammals thingymabob that michelle fixed
+        var speciesList = [];
+        for(var species in speciesData[animalClass].species) {
+          var name = (speciesData[animalClass].species[species].name)
+          speciesList.push(<li><a 
+                    href="" 
+                    onClick={function (species, e) {
+                        e.preventDefault();
+                        this.setState({
+                          animal: species,
+                        })
+                      }.bind(this, species)}
+                    
+                    style={{
+                      border: '1px solid black',
+                      margin: 2,
+                      padding: 2,
+                      display: "block",
+                      textDecoration: 'none',
+                      color: 'white',
+                      cursor: 'pointer',
+                    }}>{name}</a></li>)
+        }
+        return(
+          <div style={{
+            background:"#1D728F",
+            color: "silver",
+            height: "100%"}}>
+          
+          <a href="#"
+          style= {{color:"white",textDecoration:"none"}}
+          
+          onClick={
+            function (e) {
+              e.preventDefault();
+              changeAnimalClass("");
+              
+            }}          
+          >Back</a>
+          <h1 style= {{textAlign: "center"}}> {animalClassName} </h1>
+          <ul style={{
+                textAlign: "center",
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                  
+            }}>
+              {speciesList}
+            </ul>
+          </div>
+          );
+      },
+      renderAnimalPage: function() {
+        var animal = this.state.animal;
+        var animalObject = speciesData[this.state.animalClass].species[animal];
+        return <div style= {{
+          background:"#1D728F",
+            color: "silver",
+            height: "100%"}}>
+          <a href="#"
+          style= {{color:"white",textDecoration:"none"}}
+          
+          onClick={
+            function (e) {
+              e.preventDefault();
+             this.setState({
+               animal: '',
+             })
+              
+            }.bind(this)
+            
+          }          
+          >Back</a>
+          <h1 style={{
+            textAlign: "center"
+            
+          }}>{animalObject.name}</h1>
+          <p style={{textAlign: 'center',color:'white'}}>Food: {animalObject.food}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Niche: {animalObject.niche}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Habitat: {animalObject.habitat}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Reason for Endangerment: {animalObject.reason_for_endangerment}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Authors: {animalObject.authors}</p>
+          
+        </div>
+        
+      },
+      render: function() {
+        if (this.state.animal.length >0) {
+          return this.renderAnimalPage()
+        }
+        if (this.state.animalClass.length > 0) {
+          return this.renderAnimalClass();
+          
+        }
+        return this.renderHomepage();
+      }
+    });
+    React.render(
+      <Homepage />,
+      document.getElementById('content')
+    );
+    </script>
+  </body>
+</html>
+
+
+
+SXTransformer-0.13.2.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <style>
       head, body {
