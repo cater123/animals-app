@@ -29,12 +29,12 @@
     /*
     TODO!!!!!
     
-    -background image for app
+    -
     -add images for each animal
-    -//DIFFERENT FONT
+    -
     -boldify stuff
     -Add more animals
-    -Beautify the back button
+    -
     -
     -
     <strong> </strong>
@@ -46,7 +46,7 @@
           
         'san joaquin kit fox': {
           name: 'San Juaquin Kit Fox',
-          image: '',
+          image: 'http://upload.wikimedia.org/wikipedia/commons/a/ad/Vulpes_macrotis_mutica_sitting.jpg',
           kingdom: ' Animalia',
           phylum: 'Chordata',
           class: 'Mammalia',
@@ -62,7 +62,7 @@
         },
         'humpback whale': {
           name: 'Humpback Whale',
-          image: '',
+          image: 'http://upload.wikimedia.org/wikipedia/commons/6/61/Humpback_Whale_underwater_shot.jpg',
           kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Mammalia', 
@@ -78,7 +78,9 @@
         },
         'southern sea otter': {
           name: 'Southern Sea Otter',
-          image: '',
+          image: 'http://upload.wikimedia.org/wikipedia/commons/1/15/Sea_otter_cropped.jpg',
+          attribution: 'Michael L. Baird',
+          imageLicense: 'http://creativecommons.org/licenses/by/2.0/',
           kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Mammalia', 
@@ -103,7 +105,9 @@
         species: {
           'blainvilles horned lizard': {
             name: 'Blainvilles Horned Lizard',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/4/46/Horned_lizard_032507_kdh.jpg',
+            attributions: 'Room237',
+            imageLicense: 'http://creativecommons.org/licenses/by-sa/3.0/',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Reptila', 
@@ -119,7 +123,9 @@
           },
           'alameda whipsnake': {
             name: 'Alameda Whipsnake',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/1/10/Masticophis_lateralis_lateralis.jpg',
+            attributions: 'Stickpen',
+            imageLicense: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Reptila', 
@@ -144,6 +150,8 @@
           'peregrine_falcon': {
             name: 'Peregrine Falcon',
             image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Peregrine_Falcon_head_shot.jpg',
+            attribution: 'Keven Law from Los Angeles, USA',
+            imageLicense: 'http://creativecommons.org/licenses/by-sa/2.0/',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -159,7 +167,9 @@
           },
         'western_snowy_plover': {
             name: 'Western Snowy Plover',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/3/38/Snowy_Plover_srgb.jpg',
+            attributions: 'Michael L. Baird',
+            imageLicense: 'http://creativecommons.org/licenses/by/2.0/',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -174,7 +184,9 @@
           },
           'california least tern': {
             name: 'California Least Tern',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/b/b5/California_Least_Tern.jpg',
+            attributions: 'Ryan Hagerty',
+            imageLicense: '',
             kingdom: ' Animalia',
             phylum: 'Chordata',
             class: 'Aves',
@@ -189,7 +201,9 @@
           },
           'california brown pelican': {
             name: 'California Brown Pelican',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/5/51/Brown_Pelican21K.jpg',
+            attributions: 'Terry Foote',
+            imageLicense: 'http://creativecommons.org/licenses/by-sa/3.0/',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -205,7 +219,9 @@
           },
           'northern spotted owl': {
             name: 'Northern Spotted Owl',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/1/14/Northern_Spotted_Owl.USFWS-thumb.jpg',
+            attributions: 'John and Karen Hollingsworth',
+            imageLicense: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -234,7 +250,9 @@
         species: {
           'langes_metalmark': {
             name: 'Langes Metalmark',
-            image: '',
+            image: 'http://upload.wikimedia.org/wikipedia/commons/e/ec/Apodemia_mormo_langei-02.JPG',
+            attributions: '',
+            imageLicense: '',
             kingdom: ' Animalia', 
             phylum: 'Arthropoda', 
             class: 'Insecta', 
@@ -249,7 +267,7 @@
           },
         'delta green ground beetle': {
           name: 'Delta Green Ground Beetle',
-          image: '',
+          image: 'http://upload.wikimedia.org/wikipedia/commons/b/be/JepPrairie_6571.jpg',
           kingdom: ' Animalia', 
           phylum: 'Arthropia', 
           class: 'Insecta', 
@@ -556,17 +574,24 @@
               marginBottom: '10',
           }}>{animalObject.name}</h1>
           <img style={{width:'100%', maxWidth: '400px'}} src={animalObject.image} />
-          <p>Kingdom: {animalObject.kingdom}</p>
-          <p>Phylum: {animalObject.phylum}</p>
-          <p>Class: {animalObject.class}</p>
-          <p>Order: {animalObject.order}</p>
-          <p>Genus: {animalObject.genus}</p>
-          <p>Species: {animalObject.species}</p>
-          <p>Food: {animalObject.food}</p>
-          <p>Niche: {animalObject.niche}</p>
-          <p>Habitat: {animalObject.habitat}</p>
-          <p>Reason for Endangerment: {animalObject.reason_for_endangerment}</p>
-          <p>Authors: {animalObject.authors}</p>
+          
+          <p style={{ marginTop: 0, fontSize: 12, color: "silver" }}>
+          Image by: 
+          <a href={animalObject.imageLicense}>
+          {animalObject.attribution}
+          </a>
+          </p>
+          <p><strong>Kingdom:</strong> {animalObject.kingdom}</p>
+          <p><strong>Phylum:</strong> {animalObject.phylum}</p>
+          <p><strong>Class:</strong> {animalObject.class}</p>
+          <p><strong>Order:</strong> {animalObject.order}</p>
+          <p><strong>Genus:</strong> {animalObject.genus}</p>
+          <p><strong>Species:</strong> {animalObject.species}</p>
+          <p><strong>Food:</strong> {animalObject.food}</p>
+          <p><strong>Niche:</strong> {animalObject.niche}</p>
+          <p><strong>Habitat:</strong> {animalObject.habitat}</p>
+          <p><strong>Reason for Endangerment:</strong> {animalObject.reason_for_endangerment}</p>
+          <p><strong>Authors:</strong> {animalObject.authors}</p>
           
         </div>
         
