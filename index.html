@@ -15,6 +15,11 @@
         
         
       }
+      body {
+        background: url('https://upload.wikimedia.org/wikipedia/commons/0/07/Stara_planina_suma.jpg');
+        background-size: cover;
+        
+      }
     </style>
   </head>
   <body>
@@ -397,12 +402,12 @@
                 <a
                     href="#"
                     style={{
-                      border: '1px solid black',
+                      background: 'white',
                       margin: 2,
-                      padding: 2,
+                      padding: 10,
                       display: "block",
                       textDecoration: 'none',
-                      color: 'white',
+                      color: 'black',
                       cursor: 'pointer',
                     }}
                     onClick={
@@ -421,12 +426,15 @@
         }
         
         return (
-          <div style = {{
-            background:"#1D728F",
-            color: "silver",
-            height: "100%"
-          }}>
-            <h1 style={{textAlign: "center"}}>My Animals App</h1>
+          <div>
+            <h1 style={{
+              textAlign: "center", 
+              color: "silver",
+              background: 'white',
+              padding: '10',
+              margin: '2',
+              marginBottom: '10',
+            }}>My Animals App</h1>
             <ul style={{
                 textAlign: "center",
                 listStyle: "none",
@@ -456,18 +464,19 @@
                       }.bind(this, species)}
                     
                     style={{
-                      border: '1px solid black',
+                      
+                      background: 'white',
                       margin: 2,
-                      padding: 2,
+                      padding: 10,
                       display: "block",
                       textDecoration: 'none',
-                      color: 'white',
+                      color: 'black',
                       cursor: 'pointer',
                     }}>{name}</a></li>)
         }
         return(
           <div style={{
-            background:"#1D728F",
+            
             color: "silver",
             height: "100%"}}>
           
@@ -481,7 +490,13 @@
               
             }}          
           >Back</a>
-          <h1 style= {{textAlign: "center"}}> {animalClassName} </h1>
+          <h1 style= {{
+              textAlign: "center", 
+              color: "silver",
+              background: 'white',
+              padding: '10',
+              margin: '2',
+              marginBottom: '10',}}> {animalClassName} </h1>
           <ul style={{
                 textAlign: "center",
                 listStyle: "none",
