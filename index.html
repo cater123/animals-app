@@ -481,7 +481,14 @@
             height: "100%"}}>
           
           <a href="#"
-          style= {{color:"white",textDecoration:"none"}}
+          style= {{
+            color:"black",
+            textDecoration:"none",
+            position: 'absolute',
+            top:'20',
+            left: '10',
+            
+          }}
           
           onClick={
             function (e) {
@@ -516,11 +523,17 @@
           background:"#1D728F",
             color: 'white',
             minHeight: "100%",
-          textAlign: "center",
+            textAlign: "center",
+            padding: '2',
         }}>
 
-          <div style={{textAlign:'left'}}> <a href="#"
-          style= {{color:"white",textDecoration:"none"}}
+          <div style={{float:'left'}}> <a href="#"
+          style= {{
+            color:"black",
+            textDecoration:"none",
+            position: 'absolute',
+            top:'20',
+            left: '10',}}
           
           onClick={
             function (e) {
@@ -535,8 +548,12 @@
           >Back</a>
           </div>
           <h1 style={{
-            textAlign: "center",
-            color: "silver",
+            textAlign: "center", 
+              color: "silver",
+              background: 'white',
+              padding: '10',
+              margin: '2',
+              marginBottom: '10',
           }}>{animalObject.name}</h1>
           <img style={{width:'100%', maxWidth: '400px'}} src={animalObject.image} />
           <p>Kingdom: {animalObject.kingdom}</p>
