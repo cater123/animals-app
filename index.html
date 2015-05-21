@@ -1,15 +1,17 @@
 <!-- index.html -->
 <html>
   <head>
-    <title>Hello React</title>
+    <title>My Animals App</title>
     <script src="https://fb.me/react-0.13.2.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.2.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
     <style>
       head, body {
         height: 100%;
         margin:0;
         padding:0;
+        font-family:'Josefin Sans', sans-serif;
         
         
       }
@@ -19,7 +21,19 @@
     <div id="content"></div>
     
     <script type="text/jsx">
+    /*
+    TODO!!!!!
     
+    -background image for app
+    -add images for each animal
+    -//DIFFERENT FONT
+    -boldify stuff
+    -Add more animals
+    -Beautify the back button
+    -
+    -
+    <strong> </strong>
+    */
     var speciesData = {
       mammals: {
         name: 'Mammals',
@@ -27,6 +41,7 @@
           
         'san joaquin kit fox': {
           name: 'San Juaquin Kit Fox',
+          image: '',
           kingdom: ' Animalia',
           phylum: 'Chordata',
           class: 'Mammalia',
@@ -42,6 +57,7 @@
         },
         'humpback whale': {
           name: 'Humpback Whale',
+          image: '',
           kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Mammalia', 
@@ -57,6 +73,7 @@
         },
         'southern sea otter': {
           name: 'Southern Sea Otter',
+          image: '',
           kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Mammalia', 
@@ -81,6 +98,7 @@
         species: {
           'blainvilles horned lizard': {
             name: 'Blainvilles Horned Lizard',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Reptila', 
@@ -96,6 +114,7 @@
           },
           'alameda whipsnake': {
             name: 'Alameda Whipsnake',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Reptila', 
@@ -135,6 +154,7 @@
           },
         'western_snowy_plover': {
             name: 'Western Snowy Plover',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -149,6 +169,7 @@
           },
           'california least tern': {
             name: 'California Least Tern',
+            image: '',
             kingdom: ' Animalia',
             phylum: 'Chordata',
             class: 'Aves',
@@ -163,6 +184,7 @@
           },
           'california brown pelican': {
             name: 'California Brown Pelican',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -178,6 +200,7 @@
           },
           'northern spotted owl': {
             name: 'Northern Spotted Owl',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -206,6 +229,7 @@
         species: {
           'langes_metalmark': {
             name: 'Langes Metalmark',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Arthropoda', 
             class: 'Insecta', 
@@ -220,6 +244,7 @@
           },
         'delta green ground beetle': {
           name: 'Delta Green Ground Beetle',
+          image: '',
           kingdom: ' Animalia', 
           phylum: 'Arthropia', 
           class: 'Insecta', 
@@ -234,6 +259,7 @@
         },
         'mt hermon beetle': {
           name: 'Mt. Hermon Beetle',
+          image: '',
           kingdom: ' Animalia', 
           phylum: 'Arthropoia', 
           class: 'Insecta', 
@@ -248,6 +274,7 @@
         },
         'zayante bard-winged grasshopper': {
           name: 'Zayante Bard-Winged Grasshopper',
+          image: '',
           kingdom: ' Animalia', 
             phylum: 'Arthropoda', 
             class: 'Insecta', 
@@ -262,6 +289,7 @@
         },
           'san bruno elfin': {
             name: 'San Bruno Elfin',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Arthropoda', 
             class: 'Insecta', 
@@ -276,6 +304,7 @@
           },
           'ohlone tiger beetle': {
             name: 'Ohlone Tiger Beetle',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Arthropoda', 
             class: 'Insecta', 
@@ -299,6 +328,7 @@
         species: {
           'coho_salmon': {
             name: 'Coho Salmon',
+            image: '',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Actinopterygii', 
@@ -314,6 +344,7 @@
           //start here
           'tidewater_goby': {
             name: 'Tidewater Goby',
+            image: '',
             kingdom: ' Animalia',
             phylum: 'Chordata',
             class: 'Actinopterygii',
