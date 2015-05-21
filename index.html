@@ -119,6 +119,7 @@
         species: {
           'peregrine_falcon': {
             name: 'Peregrine Falcon',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Peregrine_Falcon_head_shot.jpg',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -468,7 +469,7 @@
         return <div style= {{
           background:"#1D728F",
             color: "silver",
-            height: "100%"}}>
+            minHeight: "100%"}}>
           <a href="#"
           style= {{color:"white",textDecoration:"none"}}
           
@@ -487,13 +488,14 @@
             textAlign: "center"
             
           }}>{animalObject.name}</h1>
-          <p style={{textAlign: 'center',color:'white'}}>Kingdom:{animalObject.kingdom}</p>
+          <img style={{width:'100%'}} src={animalObject.image} />
+          <p style={{textAlign: 'center',color:'white'}}>Kingdom: {animalObject.kingdom}</p>
           <p style={{textAlign: 'center',color:'white'}}>Phylum: {animalObject.phylum}</p>
           <p style={{textAlign: 'center',color:'white'}}>Class: {animalObject.class}</p>
           <p style={{textAlign: 'center',color:'white'}}>Order: {animalObject.order}</p>
           <p style={{textAlign: 'center',color:'white'}}>Genus: {animalObject.genus}</p>
           <p style={{textAlign: 'center',color:'white'}}>Species: {animalObject.species}</p>
-          <p style={{textAlign: 'center',color:'white'}}>Food:{animalObject.food}</p>
+          <p style={{textAlign: 'center',color:'white'}}>Food: {animalObject.food}</p>
           <p style={{textAlign: 'center',color:'white'}}>Niche: {animalObject.niche}</p>
           <p style={{textAlign: 'center',color:'white'}}>Habitat: {animalObject.habitat}</p>
           <p style={{textAlign: 'center',color:'white'}}>Reason for Endangerment: {animalObject.reason_for_endangerment}</p>
