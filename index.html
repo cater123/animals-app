@@ -31,15 +31,16 @@
     TODO!!!!!
     
     -
-    -add images for each animal (almost!!!)
+    -add images for each animal
     -
     
-    -Add more animals (in progress)
+    -Add more animals
     -
     -
     -
     <strong> </strong>
     */
+    
     var speciesData = {
       mammals: {
         name: 'Mammals',
@@ -156,7 +157,7 @@
           'peregrine_falcon': {
             name: 'Peregrine Falcon',
             image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Peregrine_Falcon_head_shot.jpg',
-            attribution: 'Keven Law from Los Angeles, USA',
+            attributions: 'Keven Law from Los Angeles, USA',
             imageLicense: 'http://creativecommons.org/licenses/by-sa/2.0/',
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
@@ -210,9 +211,7 @@
           },
           'california brown pelican': {
             name: 'California Brown Pelican',
-            image: 'http://upload.wikimedia.org/wikipedia/commons/5/51/Brown_Pelican21K.jpg',
-            attributions: 'Terry Foote',
-            imageLicense: 'http://creativecommons.org/licenses/by-sa/3.0/',
+            
             kingdom: ' Animalia', 
             phylum: 'Chordata', 
             class: 'Aves', 
@@ -412,7 +411,7 @@
           'tidewater_goby': {
             name: 'Tidewater Goby',
             image: 'http://upload.wikimedia.org/wikipedia/commons/9/93/Eucyclogobius_newberryi.jpg',
-            attribution: 'DreamofShadows',
+            attributions: 'DreamofShadows',
             imageLicense: 'http://creativecommons.org/licenses/by/2.0/',
             kingdom: ' Animalia',
             phylum: 'Chordata',
@@ -584,6 +583,21 @@
       renderAnimalPage: function() {
         var animal = this.state.animal;
         var animalObject = speciesData[this.state.animalClass].species[animal];
+        var animalImage = null
+        if (animalObject.image && animalObject.image.length > 0) {
+           animalImage = <div>
+          <img style={{width:'100%', maxWidth: '400px'}} src={animalObject.image} />
+            
+            <p style={{ marginTop: 0, fontSize: 12, color: "silver" }}>
+            Image by: 
+            <a href={animalObject.imageLicense}>
+            
+            {animalObject.attributions}
+            </a>
+            </p>
+      
+          </div>
+        }
         return <div style= {{
           background:"#1D728F",
             color: 'white',
@@ -620,15 +634,9 @@
               margin: '2',
               marginBottom: '10',
           }}>{animalObject.name}</h1>
-          <img style={{width:'100%', maxWidth: '400px'}} src={animalObject.image} />
-          
-          <p style={{ marginTop: 0, fontSize: 12, color: "silver" }}>
-          Image by: 
-          <a href={animalObject.imageLicense}>
-          
-          {animalObject.attribution}
-          </a>
-          </p>
+           
+           {animalImage}
+           
           <p><strong>Kingdom:</strong> {animalObject.kingdom}</p>
           <p><strong>Phylum:</strong> {animalObject.phylum}</p>
           <p><strong>Class:</strong> {animalObject.class}</p>
