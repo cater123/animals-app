@@ -626,9 +626,9 @@
            animalImage = <div>
           <img style={{width:'100%', maxWidth: '400px', marginBottom: '5px',}} src={animalObject.image} />
             
-            <p style={{ marginTop: 0, fontSize: 12, color: "silver" }}>
-            Image by: 
-            {animalObject.imageLicense && animalObject.imageLicense.length > 0 ? <a style={{color: 'white'}} href={animalObject.imageLicense}>
+            <p style={{ marginTop: 0, fontSize: 12, color: "#444444" }}>
+            {"Image by: "} 
+            {animalObject.imageLicense && animalObject.imageLicense.length > 0 ? <a style={{color: 'black'}} href={animalObject.imageLicense}>
             
             {animalObject.attributions}
             </a> : <span> {animalObject.attributions} </span>
@@ -638,8 +638,8 @@
           </div>
         }
         return <div style= {{
-          background:"#1D728F",
-            color: 'white',
+          background:"#D6D6D6",
+            color: 'black',
             minHeight: "100%",
             textAlign: "center",
             padding: '2',
@@ -712,6 +712,5 @@
     </script>
   </body>
 </html>
-
 
 
