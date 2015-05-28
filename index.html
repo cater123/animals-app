@@ -624,14 +624,15 @@
         var animalImage = null
         if (animalObject.image && animalObject.image.length > 0) {
            animalImage = <div>
-          <img style={{width:'100%', maxWidth: '400px'}} src={animalObject.image} />
+          <img style={{width:'100%', maxWidth: '400px', marginBottom: '5px',}} src={animalObject.image} />
             
             <p style={{ marginTop: 0, fontSize: 12, color: "silver" }}>
             Image by: 
-            <a href={animalObject.imageLicense}>
+            {animalObject.imageLicense && animalObject.imageLicense.length > 0 ? <a style={{color: 'white'}} href={animalObject.imageLicense}>
             
             {animalObject.attributions}
-            </a>
+            </a> : <span> {animalObject.attributions} </span>
+            }
             </p>
       
           </div>
